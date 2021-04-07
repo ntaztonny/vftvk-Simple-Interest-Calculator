@@ -19,7 +19,8 @@ function compute()
   var principalVal = document.getElementById("principal").value;
   if (principalVal == "")
   {
-    alert("Please enter an amount!")
+    alert("Please enter an amount!");
+    return;
   }
   var rateVal = document.getElementById("rate").value;
   var years = document.getElementById("selectedyears").value;
@@ -28,4 +29,5 @@ function compute()
 
   document.getElementById("result").innerHTML =
   "If you deposit "+ principalVal +" at an interest rate of " + rateVal + ", you will receive an amount of " + interestVal + " in the year " + futureYear;
+  return true;
 }

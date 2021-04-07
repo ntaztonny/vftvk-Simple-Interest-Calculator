@@ -7,8 +7,9 @@
         <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input onchange="setSliderValue()" type="range" min="1" max="20" step="0.25" value="10.25" id="rate" > <span id = "rateValue" >10.25 </span> <br/>
+        Amount <input type="number"  min = "0" id="principal">  <br/>
+        <!--Rate <input type="range" min="1" max="20" step="0.25" value="10.25" id="rate" onchange = "setSliderValue()"> <span id = "rateValue" >10.25 </span> <br/>-->
+        Rate <input type="range" min="1" max="20" step="0.25" id="rate" onchange = "setSliderValue()"> <span id = "rateValue" >10.25 </span> <br/>
         No. of Years <select  id="selectedyears">
             <option value = "1">1</option>
             <option value = "2">2</option>
@@ -22,12 +23,9 @@
             <option value = "10">10</option>
          </select>
         <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute Interest:</button>
-        <span id = "result">
-
-        </span>
+        Interest : <br/><span id="result"></span><br>
+        <br/>
+        <button type = "button" onclick="compute()">Compute Interest</button>
 
         <footer>
             &copy; All rights reserved Sasha

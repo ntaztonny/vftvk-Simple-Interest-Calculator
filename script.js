@@ -1,22 +1,27 @@
-function compute()
-{
-    p = document.getElementById("principal").value;
-    var principal;
-    var rate = document.getElementById("rate")
-    var years = document.getElementById("selectedyears")
-    var interest = principal * years * rate/100;
-
-    var futureYear = years.value + Date().getFullYear();
-    var result = document.getElementById("result");
-    result.innerHTML;
-}
-
 function setSliderValue()
 {
-    var slider = document.getElementById("rate");
-    var valuedisplay = document.getElementById("rateValue").innerHTML;
-    valuedisplay.innerHTML = slider.value;
+   var sliderValue = document.getElementById("rate").value;
+   document.getElementById("rateValue").innerHTML = sliderValue;
 }
 
+function addResultContent(text, value)
+{
+  var paragraph = document.createElement("span");
+  var paragraphText = document.createTextNode(text);
+  paragraphText += ' ' + value;
+  paragraph.appendChild(concatenatedText);
+  document.body.appendChild(paragraph)
 
-        
+}
+
+function compute()
+{
+  var principalVal = document.getElementById("principal").value;
+  var rateVal = document.getElementById("rate").value;
+  var years = document.getElementById("selectedyears").value;
+  var interestVal = principalVal * years * rateVal/100;
+  var futureYear = parseInt(years) + parseInt(new Date().getFullYear());
+
+  document.getElementById("result").innerHTML =
+  "If you deposit: "+ principalVal +" at an interest rate of " + rateVal + " You will receive an amount of: " + interestVal + " in the year: " + futureYear;
+}

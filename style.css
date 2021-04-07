@@ -12,6 +12,7 @@ h1
     color: black;
     padding: 20px;
     width: 300px;
+    height: auto;
     border-radius: 25px;
 }
 
@@ -20,3 +21,7 @@ div
     margin: auto;
 }
 
+
+footer{
+  margin: 10px;
+}

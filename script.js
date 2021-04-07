@@ -17,11 +17,15 @@ function addResultContent(text, value)
 function compute()
 {
   var principalVal = document.getElementById("principal").value;
+  if (principalVal == "")
+  {
+    alert("Please enter an amount!")
+  }
   var rateVal = document.getElementById("rate").value;
   var years = document.getElementById("selectedyears").value;
   var interestVal = principalVal * years * rateVal/100;
   var futureYear = parseInt(years) + parseInt(new Date().getFullYear());
 
   document.getElementById("result").innerHTML =
-  "If you deposit: "+ principalVal +" at an interest rate of " + rateVal + " You will receive an amount of: " + interestVal + " in the year: " + futureYear;
+  "If you deposit "+ principalVal +" at an interest rate of " + rateVal + ", you will receive an amount of " + interestVal + " in the year " + futureYear;
 }
